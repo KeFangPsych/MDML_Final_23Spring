@@ -2,7 +2,8 @@
 install.packages("googledrive")
 library(googledrive)
 
-# Authenticate with Google
+# Authenticate with Google (permission required)
+# See console for verification
 drive_auth()
 
 # Get the file ID from the file URL
