@@ -23,5 +23,3 @@ source(temp_file)
 
 # Conservative congressman/woman from facebook
 # str(con_congress_fb_data)
-
-# RStudio Change
