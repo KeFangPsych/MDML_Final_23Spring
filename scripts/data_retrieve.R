@@ -3,10 +3,10 @@ install.packages("googledrive")
 library(googledrive)
 
 # Authenticate with Google (permission required)
-# See console for verification
+# See the console in RStudio for verification
 drive_auth()
 
-# Get the file ID from the file URL
+# Get the file that import the data
 temp_file <- tempfile()
 drive_download(drive_get(as_id("1hdZyGfpNsKPGUBXu8tTTocsVhceR2V7E")), 
                path = temp_file)
