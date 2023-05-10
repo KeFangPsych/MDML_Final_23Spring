@@ -48,7 +48,7 @@ con_congress_fb_clean <- con_congress_fb_data %>%
          all_text = text) %>%
   mutate(poster_party = "con",
          poster_role = "congress") %>%
-  unite(col = "all_text", c(post_text, image_text, link_text, link_description), sep = " ", na.rm = TRUE, remove = FALSE) %>%
+  unite(col = "all_text", c(post_text, image_text, link_text, link_description), sep = ". ", na.rm = TRUE, remove = FALSE) %>%
   mutate(all_text = str_replace_all(all_text, "[\U{1F300}-\U{1F5FF}\U{1F600}-\U{1F64F}\U{1F680}-\U{1F6FF}\U{1F700}-\U{1F77F}\U{1F780}-\U{1F7FF}\U{1F800}-\U{1F8FF}\U{1F900}-\U{1F9FF}\U{1FA00}-\U{1FA6F}\U{1FA70}-\U{1FAFF}\U{02702}-\U{027B0}\U{02639}\U{1F300}-\U{1F5FF}\U{2B05}-\U{2B07}]", "")) %>% 
   mutate(language = detect_language(all_text))%>% 
   filter(language == 'en') %>%
@@ -94,7 +94,7 @@ lib_congress_fb_clean <- lib_congress_fb_data %>%
          all_text = text) %>%
   mutate(poster_party = "lib",
          poster_role = "congress") %>%
-  unite(col = "all_text", c(post_text, image_text, link_text, link_description), sep = " ", na.rm = TRUE, remove = FALSE) %>%
+  unite(col = "all_text", c(post_text, image_text, link_text, link_description), sep = ". ", na.rm = TRUE, remove = FALSE) %>%
   mutate(all_text = str_replace_all(all_text, "[\U{1F300}-\U{1F5FF}\U{1F600}-\U{1F64F}\U{1F680}-\U{1F6FF}\U{1F700}-\U{1F77F}\U{1F780}-\U{1F7FF}\U{1F800}-\U{1F8FF}\U{1F900}-\U{1F9FF}\U{1FA00}-\U{1FA6F}\U{1FA70}-\U{1FAFF}\U{02702}-\U{027B0}\U{02639}\U{1F300}-\U{1F5FF}\U{2B05}-\U{2B07}]", "")) %>% 
   mutate(language = detect_language(all_text))%>% 
   filter(language == 'en') %>%
@@ -140,7 +140,7 @@ con_media_fb_clean <- con_media_fb_data %>%
          all_text = text) %>%
   mutate(poster_party = "con",
          poster_role = "media") %>%
-  unite(col = "all_text", c(post_text, image_text, link_text, link_description), sep = " ", na.rm = TRUE, remove = FALSE) %>%
+  unite(col = "all_text", c(post_text, image_text, link_text, link_description), sep = ". ", na.rm = TRUE, remove = FALSE) %>%
   mutate(all_text = str_replace_all(all_text, "[\U{1F300}-\U{1F5FF}\U{1F600}-\U{1F64F}\U{1F680}-\U{1F6FF}\U{1F700}-\U{1F77F}\U{1F780}-\U{1F7FF}\U{1F800}-\U{1F8FF}\U{1F900}-\U{1F9FF}\U{1FA00}-\U{1FA6F}\U{1FA70}-\U{1FAFF}\U{02702}-\U{027B0}\U{02639}\U{1F300}-\U{1F5FF}\U{2B05}-\U{2B07}]", "")) %>% 
   mutate(language = detect_language(all_text))%>% 
   filter(language == 'en') %>%
@@ -186,7 +186,7 @@ lib_media_fb_clean <- lib_media_fb_data %>%
          all_text = text) %>%
   mutate(poster_party = "lib",
          poster_role = "media") %>%
-  unite(col = "all_text", c(post_text, image_text, link_text, link_description), sep = " ", na.rm = TRUE, remove = FALSE) %>%
+  unite(col = "all_text", c(post_text, image_text, link_text, link_description), sep = ". ", na.rm = TRUE, remove = FALSE) %>%
   mutate(all_text = str_replace_all(all_text, "[\U{1F300}-\U{1F5FF}\U{1F600}-\U{1F64F}\U{1F680}-\U{1F6FF}\U{1F700}-\U{1F77F}\U{1F780}-\U{1F7FF}\U{1F800}-\U{1F8FF}\U{1F900}-\U{1F9FF}\U{1FA00}-\U{1FA6F}\U{1FA70}-\U{1FAFF}\U{02702}-\U{027B0}\U{02639}\U{1F300}-\U{1F5FF}\U{2B05}-\U{2B07}]", "")) %>% 
   mutate(language = detect_language(all_text))%>% 
   filter(language == 'en') %>%
